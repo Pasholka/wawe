@@ -1,0 +1,127 @@
+.form  
+    margin-top: 200px 
+    &-input 
+        border: none
+        border-bottom: 1px solid red
+        padding-bottom: 10px
+        padding-top: 10px
+        height: 40px
+        background: #F8F8F8
+        &::placeholder
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            line-height: 1
+            color: #00B2A0
+    &-title 
+        position: relative
+        &::after
+            content: '/'
+            color: #00B2A0
+            font-family: 'Raleway'
+            font-style: normal
+            font-weight: 600
+            font-size: 72px
+            line-height: 1.2
+            position: absolute
+            bottom: -30px
+
+    &-textarea 
+        border: none
+        border-bottom: 1px solid red
+        height: 100px
+        resize: none
+        background: #F8F8F8
+        padding-top: 10px
+        padding-left: 10px
+        padding-right: 10px
+    &-wrap
+        padding-top: 240px
+        & p 
+            padding-top: 55px
+            // padding-bottom: 100px
+            max-width: 260px
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            line-height: 1
+            color: #00B2A0
+        & button 
+            margin-top: 75px
+            padding: 24px
+            max-width: 350px
+            font-style: normal
+            font-weight: 400
+            font-size: 24px
+            line-height: 0.75
+            color: #242121
+            border: 1px solid #C4C4C4
+            background: inherit
+            margin-bottom: 75px
+    &-list 
+        padding-top: 240px
+        & li
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.2
+            color: #242121
+            max-width: 330px
+            margin: 0 auto
+            text-align: justify
+        & a 
+            color: inherit  
+.social
+    &-wrap 
+        padding-top: 200px
+    &-list 
+        &__item 
+            text-transform: uppercase
+            font-style: normal
+            font-weight: 400
+            font-size: 24px
+            line-height: 0.8
+            color: #242121
+            margin: 0 auto
+            position: relative
+            &:hover 
+                &::after
+                    width: 100%
+                    transition:  .3s all 
+            &::after
+                content: ''
+                position: absolute
+                right: 0
+                left: 0
+                bottom: 0
+                height: 2px
+                width: 0px
+                background: #00B2A0
+
+@media screen and ( max-width: 992px )
+    .form
+        margin-top: 100px
+        &-title 
+            margin-bottom: 50px
+            &::after
+                font-size: 50px
+                bottom: -25px
+        &-wrap 
+            padding-top: 0
+            & button 
+                margin: 75px auto 75px
+        &-list 
+            padding-top: 0
+            & li 
+                max-width: 100%
+    .social
+        &-wrap 
+            padding-top: 50px
+@media screen and ( max-width: 576px )
+    .form
+        &-list 
+            & li 
+                font-size: 14px
+    .social
+        &-list 
+            &__item 
+                font-size: 14px

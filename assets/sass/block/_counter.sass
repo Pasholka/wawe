@@ -1,0 +1,43 @@
+.counter
+    &-wrapper 
+        margin-top: 200px
+    &-list 
+        gap: 10px
+    &-title
+        font-weight: 700
+        font-size: 64px
+        line-height: 1.2
+        color: #01353E
+        animation: count-up 2.5s ease-out
+        animation-fill-mode: forwards
+        
+
+        
+    &-subtitle
+        font-style: normal
+        font-weight: 300
+        font-size: 14px
+        line-height: 18px
+        color: #242121
+
+
+@keyframes count-up 
+  from 
+    /* Начальное значение */
+    opacity: 0
+    transform: translateY(50px)
+  
+
+  to 
+    /* Конечное значение */
+    opacity: 1
+    transform: translateY(0)
+
+@media screen and ( max-width: 992px )
+  .counter
+    &-wrapper 
+        margin-top: 100px
+@media screen and ( max-width: 768px )
+  .counter
+    &-title 
+      font-size: 30px

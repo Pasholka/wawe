@@ -1,0 +1,87 @@
+.gallery 
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    position: relative
+    margin-top: 200px
+    & img 
+        padding-bottom: 10px
+    &-card  
+        max-height: 600px
+        overflow: hidden
+    &-title 
+        position: relative
+        &::after
+            content: '/'
+            color: #00B2A0
+            font-family: 'Raleway'
+            font-style: normal
+            font-weight: 600
+            font-size: 72px
+            line-height: 1.2
+            position: absolute
+            bottom: -25px
+    &-list 
+        padding-top: 100px
+
+    &-item
+        font-style: normal
+        font-weight: 400
+        font-size: 24px
+        line-height: 1.3
+        color: #242121
+        text-transform: uppercase
+        position: relative
+        &:hover 
+            color: #00B2A0 !important
+            &::after
+                width: 100%
+                transition:  .3s all      
+        &::after
+            content: ''
+            position: absolute
+            right: 0
+            left: 0
+            bottom: 0
+            height: 2px
+            width: 0px
+            background: #00B2A0
+    &-btn 
+        max-width: 350px
+        max-height: 70px
+        padding: 23px 23px
+        font-weight: 400
+        font-size: 24px
+        line-height: 1.2
+        color: #242121
+        margin-top: 50px
+        border: 1px solid #C4C4C4
+        background-color: inherit
+        text-transform: uppercase
+        display: inline-block
+.card 
+    border: none
+    &-image 
+        height: 280px
+        max-height: 281px
+        min-height: 279px
+        object-fit: cover
+
+
+@media screen and ( max-width: 992px )
+    .gallery    
+        margin-top: 100px
+        &-list 
+            padding-top: 0 
+            justify-content: center
+        &-title 
+            margin-bottom: 50px
+            &::after
+                font-size: 50px 
+                bottom: -25px
+@media screen and ( max-width: 768px )
+    .gallery
+        &-btn 
+            font-size: 14px
+        &-item
+            font-size: 14px

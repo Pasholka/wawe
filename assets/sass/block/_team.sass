@@ -1,0 +1,58 @@
+.team
+    margin-top: 200px
+    &-title 
+        position: relative
+        margin-bottom: 100px
+        &::after
+            content: '/'
+            color: #00B2A0
+            font-family: 'Raleway'
+            font-style: normal
+            font-weight: 600
+            font-size: 72px
+            line-height: 1.2
+            position: absolute
+            bottom: -25px
+    &-coach
+        &__img 
+            width: 100%
+            max-width: 330px    
+            max-height: 450px   
+        &-title 
+            font-style: normal
+            font-weight: 700
+            font-size: 18px
+            line-height: 1
+            color: #242121
+            padding-top: 25px
+        &-subtitle 
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.2
+            color: #242121
+            text-transform: capitalize
+            padding-top: 5px
+        &-wrap
+            padding-top: 215px
+
+@media screen and ( max-width: 992px )
+    .team
+        margin-top: 100px
+        &-coach 
+            &-wrap 
+                padding-top: 0
+        &-title 
+            margin-bottom: 50px
+            &::after
+                font-size: 50px 
+                bottom: -25px
+        &-list 
+            padding-bottom: 20px
+@media screen and ( max-width: 768px )
+    .team
+        margin-top: 100px
+        &-coach 
+            &__img
+                max-height: 300px
+                object-fit: contain

@@ -1,0 +1,63 @@
+.header
+    background-repeat: no-repeat
+    width: 100%
+    // height: 0
+    // padding-top: 56.25% /* this sets the aspect ratio to 16:9 (1080/1920 = 0.5625) */
+    min-height: 1080px
+    background-size: cover
+    background-position: center
+
+.nav
+    &_wrap 
+        padding-top: 35px
+    &-logo 
+        // width: 100%
+        // height: 100%
+        max-width: 65px
+        
+
+    &_list 
+        gap: 55px
+        &_item
+            font-style: normal
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.2
+            color: #fff !important
+            position: relative
+            &:hover 
+                &::after
+                    width: 100%
+                    transition:  .3s all 
+            &::after
+                content: ''
+                position: absolute
+                right: 0
+                left: 0
+                bottom: 0
+                height: 2px
+                width: 0px
+                background: #00B2A0
+.hero
+    padding-top: 10%
+    padding-bottom: 360px
+    &-title 
+        font-family: 'Raleway'
+        font-style: normal
+        font-weight: 700
+        font-size: 200px
+        line-height: 235px
+    &-subtitle 
+        font-weight: 400
+        font-size: 24px
+        line-height: 1.2
+    &-image 
+        position: relative
+        
+    &-img
+        width: 20px
+        height: 70px
+        margin-top: 100px
+@media screen and ( max-width: 992px )
+    .hero-title 
+        font-size: 100px
